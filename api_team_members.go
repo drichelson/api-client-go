@@ -418,15 +418,15 @@ TeamMembersApiService Invite new members.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param membersBody New members to invite.
 
-@return Member
+@return Members
 */
-func (a *TeamMembersApiService) PostMembers(ctx context.Context, membersBody []MembersBody) (Member, *http.Response, error) {
+func (a *TeamMembersApiService) PostMembers(ctx context.Context, membersBody []MembersBody) (Members, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue Member
+		localVarReturnValue Members
 	)
 
 	// create path and map variables
@@ -499,7 +499,7 @@ func (a *TeamMembersApiService) PostMembers(ctx context.Context, membersBody []M
 		}
 		
 		if localVarHttpResponse.StatusCode == 201 {
-			var v Member
+			var v Members
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()

@@ -1394,7 +1394,7 @@ paths:
       parameters: []
       responses:
         200:
-          description: "Projects response."
+          description: "Members response."
           schema:
             $ref: "#/definitions/Members"
         401:
@@ -1416,9 +1416,9 @@ paths:
         x-exportParamName: "MembersBody"
       responses:
         201:
-          description: "Member response."
+          description: "Members response."
           schema:
-            $ref: "#/definitions/Member"
+            $ref: "#/definitions/Members"
         400:
           description: "Invalid request body."
         401:

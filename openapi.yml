@@ -764,7 +764,7 @@ paths:
       operationId: getMembers
       responses:
         '200':
-          description: Projects response.
+          description: Members response.
           schema:
             $ref: '#/definitions/Members'
         '401':
@@ -778,7 +778,9 @@ paths:
         - $ref: '#/parameters/MembersPostRequest'
       responses:
         '201':
-          $ref: '#/responses/Member2xx'
+          description: Members response.
+          schema:
+            $ref: '#/definitions/Members'
         '400':
           $ref: '#/responses/Standard400'
         '401':

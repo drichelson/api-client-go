@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMembers**
-> Member PostMembers(ctx, membersBody)
+> Members PostMembers(ctx, membersBody)
 Invite new members.
 
 ### Required Parameters
@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Member**](Member.md)
+[**Members**](Members.md)
 
 ### Authorization
 
