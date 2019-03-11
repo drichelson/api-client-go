@@ -1032,7 +1032,9 @@ definitions:
       _links:
         $ref: '#/definitions/Links'
       items:
-        $ref: '#/definitions/Member'
+        type: array
+        items:
+          $ref: '#/definitions/Member'
   FeatureFlagConfig:
     type: object
     properties:

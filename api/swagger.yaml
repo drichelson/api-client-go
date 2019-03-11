@@ -2163,7 +2163,9 @@ definitions:
       _links:
         $ref: "#/definitions/Links"
       items:
-        $ref: "#/definitions/Member"
+        type: "array"
+        items:
+          $ref: "#/definitions/Member"
     example:
       _links:
         next:
@@ -2173,7 +2175,22 @@ definitions:
           href: "/api/v2/endpoint"
           type: "application/json"
       items:
-        role: {}
+      - role: {}
+        _links:
+          next:
+            href: "/api/v2/endpoint"
+            type: "application/json"
+          self:
+            href: "/api/v2/endpoint"
+            type: "application/json"
+        _pendingInvite: true
+        isBeta: true
+        _id: "5a580a01b4ff89217bdf9dc1"
+        email: "user@launchdarkly.com"
+        customRoles:
+        - "5a580a01b4ff89217bdf9dc1"
+        - "5a580a01b4ff89217bdf9dc1"
+      - role: {}
         _links:
           next:
             href: "/api/v2/endpoint"
