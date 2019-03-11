@@ -1016,6 +1016,12 @@ definitions:
       email:
         type: string
         example: user@launchdarkly.com
+      firstName:
+        type: string
+        example: Alan
+      lastName:
+        type: string
+        example: Turing
       _pendingInvite:
         type: boolean
       isBeta:
