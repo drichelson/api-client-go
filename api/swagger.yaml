@@ -3609,7 +3609,9 @@ definitions:
       _links:
         $ref: "#/definitions/Links"
       items:
-        $ref: "#/definitions/CustomRole"
+        type: "array"
+        items:
+          $ref: "#/definitions/CustomRole"
     example:
       _links:
         next:
@@ -3619,7 +3621,33 @@ definitions:
           href: "/api/v2/endpoint"
           type: "application/json"
       items:
-        _links:
+      - _links:
+          next:
+            href: "/api/v2/endpoint"
+            type: "application/json"
+          self:
+            href: "/api/v2/endpoint"
+            type: "application/json"
+        name: "revenue team"
+        description: "Description of revenue team role here"
+        _id: "5a580a01b4ff89217bdf9dc1"
+        key: "revenue-team"
+        policy:
+        - effect: "deny"
+          resources:
+          - "proj/*:env/*:flag/my-flag"
+          - "proj/*:env/*:flag/my-flag"
+          actions:
+          - "updateOn"
+          - "updateOn"
+        - effect: "deny"
+          resources:
+          - "proj/*:env/*:flag/my-flag"
+          - "proj/*:env/*:flag/my-flag"
+          actions:
+          - "updateOn"
+          - "updateOn"
+      - _links:
           next:
             href: "/api/v2/endpoint"
             type: "application/json"
